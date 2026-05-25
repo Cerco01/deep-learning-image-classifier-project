@@ -1,0 +1,13 @@
+__pycache__
+.env
+.learn
+.vscode
+.ipynb_checkpoints
+
+# Dataset de imágenes. Es grande y se descarga localmente.
+data/raw/*
+!data/raw/.gitkeep
+
+# Material personal/de clase. No se sube en la entrega.
+TODO.md
+theory/
