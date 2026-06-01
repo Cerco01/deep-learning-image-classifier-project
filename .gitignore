@@ -3,10 +3,17 @@ __pycache__
 .learn
 .vscode
 .ipynb_checkpoints
+.DS_Store
+*.backup*
 
 # Dataset de imágenes. Es grande y se descarga localmente.
 data/raw/*
 !data/raw/.gitkeep
+data/processed/
+
+# Modelos entrenados (se regeneran)
+models/*.keras
+!models/.gitkeep
 
 # Material personal/de clase. No se sube en la entrega.
 TODO.md
