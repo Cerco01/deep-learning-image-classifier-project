@@ -108,6 +108,16 @@ Como mejora futura, se podría repetir el entrenamiento usando el dataset comple
 
 Para hacerlo correctamente habría que separar primero el dataset completo en carpetas de `train`, `validation` y `test`.
 
+## Limitaciones de hardware y próximos pasos
+
+El `transfer learning` con `MobileNetV2` entrenado en este proyecto usa `CPU` y no `GPU`. La razón está documentada en la sección "Apartamiento del paso 3 del enunciado" del notebook.
+
+Tres cosas que quedaron pendientes para próximos proyectos:
+
+- Habilitar `Plataforma de máquina virtual` en `Windows` y arrancar `WSL2` con la distro `Ubuntu` ya registrada. Eso permite usar `TensorFlow` con `CUDA` real en `Linux`.
+- Instalar `TensorFlow[and-cuda]` dentro de `WSL2` con `Python 3.10` o `3.11` para usar la `RTX 3060 Ti` de verdad.
+- Reentrenar la `VGG` completa del enunciado a `200x200` con `EarlyStopping` y `ModelCheckpoint` cuando la `GPU` esté disponible. En `CPU` esa arquitectura no entra en memoria con `600` imágenes y un `batch_size` razonable.
+
 ## Créditos
 
 Este proyecto fue realizado como parte del [Bootcamp de Data Science y Machine Learning de 4Geeks](https://4geeksacademy.com/en/career-programs/data-science-ml).
